@@ -30,7 +30,7 @@ async def hello(ctx):
 
 @bot.command()
 async def roll(ctx, message):
-    error_msg = f"Format: !roll d<number>\nValid numbers are {valid_dice}"
+    error_msg = f"Format: !roll <quantity>d<number>\nValid numbers are {valid_dice}"
     if not re.fullmatch("[0-9]*d[0-9]+", message):
         await ctx.send(error_msg)
         return
